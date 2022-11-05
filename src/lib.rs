@@ -1,13 +1,8 @@
-pub fn template_function(x: i32) -> i32 {
-    x * x
-}
+mod reader;
+mod dictionary;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+// Dictionary type which may be needed.
+pub use dictionary::DictionaryEntry;
 
-    #[test]
-    fn it_works() {
-        assert_eq!(template_function(2), 4);
-    }
-}
+// Publicly export main getter methods.
+pub use dictionary::get_dictionary;
