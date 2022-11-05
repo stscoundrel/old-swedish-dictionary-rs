@@ -9,9 +9,13 @@ description = """
 Old Swedish Dictionary for Rust. From K.F. Söderwall's Medieval Swedish Dictionary
 """
 edition = "2018"
+exclude = ["tests/*"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
+
+[dev-dependencies]
+insta = { version = "1.21.0", features = ["json"] }
