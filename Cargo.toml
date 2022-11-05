@@ -1,12 +1,12 @@
 [package]
-name = "template"
-version = "1.0.0"
+name = "old_swedish_dictionary"
+version = "0.1.0"
 authors = ["stscoundrel / Sampo Silvennoinen"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/stscoundrel/rust-template"
+repository = "https://github.com/stscoundrel/old-swedish-dictionary-rs"
 description = """
-Add definition here
+Old Swedish Dictionary for Rust. From K.F. Söderwall's Medieval Swedish Dictionary
 """
 edition = "2018"
 
