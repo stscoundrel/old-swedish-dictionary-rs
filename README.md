@@ -6,8 +6,6 @@ Based on K.F. Söderwall's Medieval Swedish Dictionary
 
 ### Install
 
-### Install
-
 Add this to your `Cargo.toml`:
 
 ```toml
@@ -15,6 +13,21 @@ Add this to your `Cargo.toml`:
 old_swedish_dictionary = "0.1.0"
 ```
 
+### Usage
+
+
+```rust
+// Ships getter for dictionary, plus DictionaryEntry.
+use old_swedish_dictionary::{get_dictionary, DictionaryEntry};
+
+let dictionary = get_dictionary();
+
+// Both methods return Result, which should always be safe to unwrap.
+// Up to you if you wish to just unwrap, or use other error handling method.
+let dictionary_content: Vec<DictionaryEntry> = dictionary.unwrap();
+
+println!("A word from dictionary: {}. First definition for it is: {}", &dictionary_content[0].headword, &dictionary_content[0].definitions[0])
+```
 
 ### About "Dictionary of Old Swedish"
 
