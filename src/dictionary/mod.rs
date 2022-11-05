@@ -2,8 +2,6 @@ mod dictionary_entry;
 pub use dictionary_entry::DictionaryEntry;
 use crate::reader;
 
-const DICTIONARY_PATH: &str = "src/dictionary/dataset/old-swedish-dictionary.json";
-
 /// Get full list of dictionary entries.
 ///
 /// 
@@ -17,9 +15,9 @@ const DICTIONARY_PATH: &str = "src/dictionary/dataset/old-swedish-dictionary.jso
 /// println!("First word is {}, first definition for it being {}", &dictionary[0].headword, &dictionary[0].definitions[0])
 /// ```
 pub fn get_dictionary() -> Result<Vec<DictionaryEntry>, &'static str> {
-    let contents = reader::read_json_file(DICTIONARY_PATH).unwrap();
+    let contents = reader::read_dictionary_json();
 
-    match serde_json::from_str(&contents){
+    match serde_json::from_str(contents){
         Ok(entries) => Ok(entries),
         Err(_e) => Err("Failed to serialize dictionary to DictionaryEntries"),
     }
