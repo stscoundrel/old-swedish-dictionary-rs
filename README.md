@@ -6,7 +6,7 @@ Based on K.F. Söderwall's Medieval Swedish Dictionary
 
 ### Install
 
-`cargo add old_swedish-Dictionary`
+`cargo add old_swedish_dictionary`
 
 Or add this to your `Cargo.toml`:
 
