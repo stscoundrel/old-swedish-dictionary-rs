@@ -12,7 +12,7 @@ Or add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-old_swedish_dictionary = "0.2.0"
+old_swedish_dictionary = "1.0.0"
 ```
 
 ### Usage

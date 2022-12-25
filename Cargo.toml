@@ -1,6 +1,6 @@
 [package]
 name = "old_swedish_dictionary"
-version = "0.2.0"
+version = "1.0.0"
 authors = ["stscoundrel / Sampo Silvennoinen"]
 license = "MIT"
 readme = "README.md"
