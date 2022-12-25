@@ -42,9 +42,12 @@ mod tests {
         let entry: &DictionaryEntry = &dictionary[1989];
 
         assert_eq!(entry.headword, "barklös");
-        assert_eq!(entry.part_of_speech, "av");
+        assert_eq!(entry.part_of_speech[0], "av");
+        assert_eq!(entry.part_of_speech.len(), 1);
         assert_eq!(entry.grammatical_aspect, "adj.");
+        assert_eq!(entry.information, "");
         assert_eq!(entry.definitions[0], "saknande bark.  Lg 91 .");
+        assert_eq!(entry.definitions.len(), 1);
         assert_eq!(entry.alternative_forms.len(), 0);
     }    
 }
